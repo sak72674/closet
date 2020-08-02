@@ -1,0 +1,31 @@
+.background {
+	background: linear-gradient(163.94439355067925deg, rgba(235, 187, 167,1) 17.955927051671733%,rgba(234, 187, 167,1) 17.955927051671733%,rgba(207, 199, 248,1) 73.5790273556231%);
+	width: 100vw;
+	height: 100vh;
+}
+
+.form {
+	width: 300px;
+	height: 400px;
+	margin: 50px auto;
+	padding: 50px 0;
+}
+
+h2, .form-headline {
+	margin-bottom: 30px;
+	color: #666;
+}
+
+.field {
+	text-align: left;
+	margin-bottom: 15px;
+	color: #666;
+}
+
+.form-item {
+	border: none;
+	border-bottom: solid 1px #eee;
+	width: 100%;
+	background-color: rgba(0,0,0,0);
+	height: 50px;
+}

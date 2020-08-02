@@ -1,0 +1,9 @@
+
+			<%= attachment_image_tag user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg", size:'100x100', class: "image-circle" %>
+			<div class="user-info">
+			    <%= user.name %>
+			    <%= user.biography %>
+			    <% if user.id == current_user.id %>
+			      <%= link_to 'Edit Profile', edit_user_path(user.id), class:"btn btn-default btn-block" %>
+			    <% end %>
+			</div>

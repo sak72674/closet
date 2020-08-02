@@ -1,0 +1,12 @@
+<div class="background">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<%= render "users/userinfo", user: @user %>
+			</div>
+
+			<div class="col-md-8">
+				<% codes.each do |code| %>
+					<%= attachment_image_tag code, :post_image %>
+				<% end %>
+			</div>

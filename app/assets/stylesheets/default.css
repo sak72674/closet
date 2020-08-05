@@ -33,3 +33,33 @@ h2, .form-headline {
 .user-info {
 	text-align: left;
 }
+
+.flex {
+	display: flex;
+	justify-content: center;
+}
+
+.flex-left {
+	width: 300px;
+}
+
+.form-field {
+	padding: 10px 0;
+}
+
+.form-image {
+	font-size: 100px;
+	text-align: center;
+	border: solid 1px #eee;
+	height: 300px;
+	line-height: 300px;
+}
+
+.form-select {
+	text-align: right;
+	border-radius: 3px;
+}
+
+.flex-right {
+	width: 700px;
+}

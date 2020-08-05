@@ -1,0 +1,36 @@
+<h2>New</h2>
+<%= form_for(code, url: codes_path) do |f| %>
+	<div class="code-form">
+		<div class="form-field form-image">
+			<%= f.label :post_image, class:"far fa-image" do %>
+			<%= f.attachment_field :post_image, id: "item-image", style: "display: none;" %>
+			<% end %>
+		</div>
+		<div class="form-field form-select">
+			<%= f.select :category, [["Casual",1], ["Conservative",2], ["Street",3], ["Mode",4], ["Ethnic",5], ["Rock",6], ["other",7]], prompt: "Category" %>
+		</div>
+		<div class="form-field">
+			<%= f.label :text, 'Comment' %>
+			<%= f.text_area :text, class:"form-control" %>
+		</div>
+		<div class="form-field">
+			<%= f.submit 'Post', class:"btn btn-info" %>
+		</div>
+	</div>
+<% end %>
+
+<script>
+$(function(){
+    // inputのidから情報の取得
+    $('#item_image').on('change', function (e) {
+	// ここから既存の画像のurlの取得
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $(".form-image").attr('src', e.target.result);
+    }
+	// ここまで
+    reader.readAsDataURL(e.target.files[0]); //取得したurlにアップロード画像のurlを挿入
+});
+});
+
+</script>

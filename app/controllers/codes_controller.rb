@@ -7,15 +7,13 @@ before_action :authenticate_user!
 		@users = User.all
 	end
 
-	def new
-	end
-
 	def create
 		@code = Code.new(code_params)
 		@code.user_id == current_user.id
 		if @code.save
            redirect_to codes_path
         else
+           flash[:notice] = @code.errors.full_messages
            redirect_to codes_path
         end
 	end
@@ -35,7 +33,7 @@ before_action :authenticate_user!
 	private
 
 	def code_params
-		params.require(:code).permit(:post_image, :category, :user_id, :text)
+		params.require(:code).permit(:post_image, :category, :text)
 	end
 
 end

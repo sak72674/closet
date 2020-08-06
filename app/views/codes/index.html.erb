@@ -1,3 +1,4 @@
+
 <div class="background">
 	<div class="flex">
 		<div class="flex-left">
@@ -5,3 +6,16 @@
 			<%= render "codes/new", code: @code %>
 		</div>
 		<div class="flex-rigth">
+			<% @codes.each do |code| %>
+			<div class="post-images">
+				<%= attachment_image_tag code, :post_image, :fill, 225, 300, fallback:"closet_image.jpg", size:"225x300" %>
+			</div>
+			<div>
+				<%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60', class: "image-circle" %>
+				<%= user.name %>
+				<br>
+				<%= code.text %>
+			</div>
+			<% end %>
+		</div>
+

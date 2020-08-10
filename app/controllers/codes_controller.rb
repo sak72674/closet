@@ -9,7 +9,7 @@ before_action :authenticate_user!
 
 	def create
 		@code = Code.new(code_params)
-		@code.user_id == current_user.id
+		@code.user_id = current_user.id
 		if @code.save
            redirect_to codes_path
         else

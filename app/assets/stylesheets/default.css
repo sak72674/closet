@@ -42,6 +42,7 @@ h2, .form-headline {
 
 .flex-left {
 	width: 300px;
+	margin-top: 30px;
 }
 
 .form-field {
@@ -53,6 +54,25 @@ h2, .form-headline {
 	border-radius: 3px;
 }
 
-.flex-right {
-	width: 700px;
+.flex-rigth {
+	width: 600px;
+	margin-left: 100px;
+	margin-top: 50px;
+}
+
+.flex-rigth div {
+	float: left;
+}
+
+.posts {
+	margin-top: 30px;
+}
+
+.post-items {
+	padding: 10px;
+}
+
+.textbox {
+	width: 300px;
+	height: 200px;
 }

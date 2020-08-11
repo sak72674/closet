@@ -12,7 +12,8 @@
   <body>
     <header>
       <div><img src="assets/closet_logo.png" class="logo"></div>
-      <div>My page</div>
+      <div><%= link_to 'Home', codes_path %></div>
+      <div><%= link_to 'My Page', user_path(current_user) %></div>
       <div><%= link_to 'Logout', destroy_user_session_path, method: :delete %></div>
     </header>
     <main>

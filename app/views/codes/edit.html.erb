@@ -1,0 +1,27 @@
+<div class="background">
+	<div class="flex">
+		<h2>Edit Post</h2>
+		<%= form_for(@code) do |f| %>
+			<div class="edit-form">
+				<div class="edit-form-field edit-form-image">
+					<%= f.label :post_image do %>
+					<img src="assets/img-icon.jpg" width="225" class="img-icon">
+				</div>
+				<div>
+					<%= f.attachment_field :post_image %>
+				</div>
+					<% end %>
+				<div class="edit-form-field edit-form-select">
+					<%= f.select :category, [["Casual"], ["Conservative"], ["Street"], ["Mode"], ["Ethnic"], ["Rock"], ["Other"]], prompt: "Category" %>
+				</div>
+				<div class="edit-form-field">
+					<%= f.label :text, 'Comment' %>
+					<%= f.text_area :text, class:"form-control" %>
+				</div>
+				<div class="edit-form-field">
+					<%= f.submit 'Done', class:"btn btn-info" %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

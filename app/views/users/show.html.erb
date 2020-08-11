@@ -1,0 +1,24 @@
+<div class="background">
+	<div class="flex">
+		<div class="my-flex-left">
+			<%= render "users/userinfo", user: @user %>
+			<% @codes.each do |code| %>
+				<div class="my-posts">
+					<div class="my-post-images">
+						<%= attachment_image_tag code, :post_image, :fill, 225, 300, fallback:"closet_image.jpg", size:"225x300" %>
+					</div>
+					<div class="my-post-items">
+						<%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60', class: "image-circle" %>
+						<%= @user.name %>
+						<br>
+						<%= code.category %>
+						<br>
+						<div class="my-textbox">
+							<%= code.text %>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<div class="my-flex-right">
+			<h2 class="clothes-headline">My Clothes</h2>

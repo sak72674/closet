@@ -20,7 +20,7 @@
 		</div>
 			<% end %>
 		<div class="form-field form-select">
-			<%= f.select :category, Code.categories.keys.to_a %>
+			<%= f.select :category, [["Casual"], ["Conservative"], ["Street"], ["Mode"], ["Ethnic"], ["Rock"], ["Other"]], prompt: "Category" %>
 		</div>
 		<div class="form-field">
 			<%= f.label :text, 'Comment' %>

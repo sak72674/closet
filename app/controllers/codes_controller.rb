@@ -22,9 +22,16 @@ before_action :authenticate_user!
 	end
 
 	def edit
+		@code = Code.find(params[:id])
 	end
 
 	def update
+		@code = Code.find(params[:id])
+		if @code.update
+		   redirect_to codes_path
+		else
+			flash[:notice] = @code.errors.full_messages
+			redirect_to edit_code_path(code.id)
 	end
 
 	def destroy
